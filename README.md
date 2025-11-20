@@ -2,6 +2,10 @@
 A small library providing an abstract convenient random access API for streams and a high performant reader with cache buffers and parallel threads. Implementations are available for the following languages/platforms: Java, Android, C#, Python, TypeScript/JavaScript.  
 Published under MIT License  
 
+[![License: MIT](https://img.shields.io/github/license/mku11/SimpleIO.svg)](LICENSE)
+[![Version](https://img.shields.io/badge/version-1.0.1-blue)](https://github.com/mku11/SimpleIO/releases)
+[![GitHub Releases](https://img.shields.io/github/downloads/mku11/SimpleFS/latest/total?logo=github)](https://github.com/mku11/SimpleIO/releases)
+
 ## Features
 * Abstract stream API for random access (Read,Write,Seek).
 * Easy and consistent API syntax across all languages implemented: Java, C#, Python, and Tavascript.
@@ -10,6 +14,9 @@ Published under MIT License
 * Conversion and encoding utilities for byte arrays are also provided.
 
 ## Example
+The API is consistent across all platforms/languages, this example is for Java.  
+There is a full list of file system operations, for more details see the API documentation reference in the project web site.  
+
 1. Implement your custom stream based on the RandomAccessStream contract API, this is the majority of the work that needs to be done. As an example you can see MemoryStream which is already provided in the library.  
 ```
 class MyStream extends RandomAccessStream {
