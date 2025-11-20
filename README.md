@@ -15,7 +15,7 @@ Published under MIT License
 
 ## Example
 The API is consistent across all platforms/languages, this example is for Java.  
-There is a full list of file system operations, for more details see the API documentation reference in the project web site.  
+There is a full list of API operations, for more details see the API documentation reference in the project web site.  
 
 1. Implement your custom stream based on the RandomAccessStream contract API, this is the majority of the work that needs to be done. As an example you can see MemoryStream which is already provided in the library.  
 ```
