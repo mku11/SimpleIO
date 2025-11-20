@@ -62,8 +62,14 @@ export class Platform {
      * Imports CommonJS node libraries. Do not use in the browser.
      * @returns {any} The module export
      */
-    public static require(moduleName: string): any {
-        return requireModule(moduleName);
+    static async require(moduleName: string): Promise<any> {
+        if (Platform.getPlatform() == PlatformType.NodeJs) {
+            // @ts-ignore
+            const { createRequire } = await import('module');
+            let requireModule = createRequire(import.meta.url);
+            return requireModule(moduleName);
+        }
+        return null;
     }
 }
 
@@ -101,11 +107,4 @@ export enum OSType {
      * Unknown
      */
     Unknown
-}
-
-let requireModule: any | null;
-if(Platform.getPlatform() == PlatformType.NodeJs) {
-    // @ts-ignore
-	const { createRequire } = await import('module');
-	requireModule = createRequire(import.meta.url);
 }
