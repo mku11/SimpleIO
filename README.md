@@ -4,7 +4,7 @@ Published under MIT License
 
 [![License: MIT](https://img.shields.io/github/license/mku11/SimpleIO.svg)](LICENSE)
 [![Version](https://img.shields.io/badge/version-1.0.1-blue)](https://github.com/mku11/SimpleIO/releases)
-[![GitHub Releases](https://img.shields.io/github/downloads/mku11/SimpleFS/latest/total?logo=github)](https://github.com/mku11/SimpleIO/releases)
+[![GitHub Releases](https://img.shields.io/github/downloads/mku11/SimpleIO/latest/total?logo=github)](https://github.com/mku11/SimpleIO/releases)
 
 ## Features
 * Abstract stream API for random access (Read,Write,Seek).
