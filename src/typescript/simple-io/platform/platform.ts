@@ -75,7 +75,7 @@ export class Platform {
     /**
      * Get the absolute path to a js module ie: getAbsolutePath("file.js", import.meta.url);
      * @param path The path
-     * @param path The module path, ie: import.meta.url
+     * @param modulePath The module path, ie: import.meta.url
      * @returns {Promise<string>} The absolute path
      */
     static async getAbsolutePath(path: string, modulePath: any): Promise<string> {
