@@ -71,6 +71,27 @@ export class Platform {
         }
         return null;
     }
+
+    /**
+     * Get the absolute path to a js module ie: getAbsolutePath("file.js", import.meta.url);
+     * @param path The path
+     * @param path The module path, ie: import.meta.url
+     * @returns {Promise<string>} The absolute path
+     */
+    static async getAbsolutePath(path: string, modulePath: any): Promise<string> {
+        if (Platform.getPlatform() == PlatformType.NodeJs) {
+            const { fileURLToPath } = await import('node:url');
+            modulePath = fileURLToPath(modulePath);
+        }
+        let idx = modulePath.lastIndexOf("\\");
+        if (idx < 0)
+            idx = modulePath.lastIndexOf("/");
+        let currDir = "";
+        if (idx >= 0)
+            currDir = modulePath.substring(0, idx);
+        let absPath = currDir + "/" + path;
+        return absPath;
+    }
 }
 
 /**
