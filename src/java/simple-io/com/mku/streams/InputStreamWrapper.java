@@ -263,10 +263,18 @@ public class InputStreamWrapper extends InputStream {
         return bytesRead;
     }
 
+    /**
+     * Get the current back offset
+     * @return The back offset
+     */
     public int getBackOffset() {
         return backOffset;
     }
 
+    /**
+     * Set the back offset
+     * @param backOffset The back offset
+     */
     protected void setBackOffset(int backOffset) {
         this.backOffset = backOffset;
     }

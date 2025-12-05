@@ -30,10 +30,11 @@ SOFTWARE.
  * @param <R> Return Type
  */
 public interface Function<T, R> {
+
 	/**
 	 * Apply the data
-	 * @param T data The object
-	 * @param R The return object
+	 * @param data The object
+	 * @return The return object
 	 */
     R apply(T data);
 }

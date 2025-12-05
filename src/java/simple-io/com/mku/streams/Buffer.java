@@ -6,6 +6,10 @@ import java.util.Arrays;
  * Buffer that can be used for buffered streams.
  */
 public class Buffer {
+    /**
+     * Get the buffer data
+     * @return The buffer data
+     */
     public byte[] getData() {
         return data;
     }

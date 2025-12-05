@@ -53,12 +53,20 @@ public class BlockingInputOutputAdapterStream extends PipedOutputStream {
         }
     }
 
+    /**
+     * Initialize a blocking piped adapter.
+     * @throws IOException If an error occurs
+     */
     public BlockingInputOutputAdapterStream() throws IOException {
         super();
         inputStream = new SyncedPipedInputStream();
         connect(inputStream);
     }
 
+    /**
+     * Get the input stream attached to this piped stream
+     * @return The input stream
+     */
     public InputStream getInputStream() {
         return inputStream;
     }
@@ -105,6 +113,10 @@ public class BlockingInputOutputAdapterStream extends PipedOutputStream {
         }
     }
 
+    /**
+     * Notify the stream that all the data are consumed
+     * @param value True to notify
+     */
     public void setReceived(boolean value) {
         received = value;
         synchronized (receivedLock) {

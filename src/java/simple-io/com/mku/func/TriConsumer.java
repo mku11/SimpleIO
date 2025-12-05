@@ -33,9 +33,9 @@ SOFTWARE.
 public interface TriConsumer<T1, T2, T3> {
 	/**
 	 * Accept the data
-	 * @param T1 data1 The first object
-	 * @param T2 data2 The second object
-	 * @param T3 data3 The third object
+	 * @param data1 The first object
+	 * @param data2 The second object
+	 * @param data3 The third object
 	 */
     void accept(T1 data1, T2 data2, T3 data3);
 }

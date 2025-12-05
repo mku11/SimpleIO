@@ -31,7 +31,7 @@ SOFTWARE.
 public interface Consumer<T> {
 	/**
 	 * Accept the data
-	 * @param T data The object
+	 * @param data The object
 	 */
     void accept(T data);
 }

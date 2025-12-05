@@ -32,8 +32,8 @@ SOFTWARE.
 public interface BiConsumer<T1, T2> {
 	/**
 	 * Accept the data
-	 * @param T1 data1 The first object
-	 * @param T2 data2 The second object
+	 * @param data1 The first object
+	 * @param data2 The first object
 	 */
     void accept(T1 data1, T2 data2);
 }
