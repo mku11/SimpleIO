@@ -29,5 +29,9 @@ SOFTWARE.
  * @param <T> Type of argument
  */
 public interface Consumer<T> {
+	/**
+	 * Accept the data
+	 * @param T data The object
+	 */
     void accept(T data);
 }

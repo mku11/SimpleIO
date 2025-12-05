@@ -29,5 +29,9 @@ SOFTWARE.
  * @param <R> Return Type
  */
 public interface Supplier<R> {
+	/**
+	 * Get the data
+	 * @return The data
+	 */
     R get();
 }

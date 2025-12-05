@@ -30,5 +30,10 @@ SOFTWARE.
  * @param <T2> Type of second argument
  */
 public interface BiConsumer<T1, T2> {
+	/**
+	 * Accept the data
+	 * @param T1 data1 The first object
+	 * @param T2 data2 The second object
+	 */
     void accept(T1 data1, T2 data2);
 }

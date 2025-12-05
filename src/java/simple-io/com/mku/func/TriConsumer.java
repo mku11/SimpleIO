@@ -31,5 +31,11 @@ SOFTWARE.
  * @param <T3> Type of third argument
  */
 public interface TriConsumer<T1, T2, T3> {
+	/**
+	 * Accept the data
+	 * @param T1 data1 The first object
+	 * @param T2 data2 The second object
+	 * @param T3 data3 The third object
+	 */
     void accept(T1 data1, T2 data2, T3 data3);
 }
