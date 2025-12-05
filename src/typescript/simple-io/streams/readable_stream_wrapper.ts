@@ -446,7 +446,7 @@ export class ReadableStreamWrapper {
     /**
      * Fills a cache buffer with the data from the source stream.
      * @param { Buffer } cacheBuffer The cache buffer that will store the contents
-	 * @param { number } startPosition The start position
+     * @param { number } startPosition The start position
      * @param { number } length      The length of the data requested
      * @returns {Promise<number>} The bytes read
      */
