@@ -80,6 +80,7 @@ export class Platform {
      */
     static async getAbsolutePath(path: string, modulePath: any): Promise<string> {
         if (Platform.getPlatform() == PlatformType.NodeJs) {
+			// @ts-ignore
             const { fileURLToPath } = await import('node:url');
             modulePath = fileURLToPath(modulePath);
         }

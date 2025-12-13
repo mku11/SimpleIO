@@ -13,6 +13,12 @@ Published under MIT License
 * Stream reader with cache buffering and parallel threads for hign performance native to each language.
 * Conversion and encoding utilities for byte arrays are also provided.
 
+## API Docs
+[**Java**](https://mku11.github.io/SimpleIO/docs/1.0.2/java/html)  
+[**C#**](https://mku11.github.io/SimpleIO/docs/1.0.2/csharp/html)  
+[**Python**](https://mku11.github.io/SimpleIO/docs/1.0.2/python/html)  
+[**TypeScript**](https://mku11.github.io/SimpleIO/docs/1.0.2/typescript/html)  
+
 ## Example
 The API is consistent across all platforms/languages, this example is for Java.  
 There is a full list of API operations, for more details see the API documentation reference in the project web site.  
