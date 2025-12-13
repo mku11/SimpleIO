@@ -15,8 +15,8 @@ Published under MIT License
 
 ## API Docs
 [**Java**](https://mku11.github.io/SimpleIO/docs/1.0.2/java/html)  
-[**C#**](https://mku11.github.io/SimpleIO/docs/1.0.2/csharp/html)  
-[**Python**](https://mku11.github.io/SimpleIO/docs/1.0.2/python/html)  
+[**C#**](https://mku11.github.io/SimpleIO/docs/1.0.2/csharp/html/namespaces.html)  
+[**Python**](https://mku11.github.io/SimpleIO/docs/1.0.2/python/html/namespaces.html)  
 [**TypeScript**](https://mku11.github.io/SimpleIO/docs/1.0.2/typescript/html)  
 
 ## Example
