@@ -27,9 +27,9 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-from typeguard import typechecked
+from beartype import beartype
 
-@typechecked
+@beartype
 class BitConverter:
     """!
     Converts from/to byte arrays, integral values, and hex strings.

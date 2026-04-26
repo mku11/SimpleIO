@@ -29,10 +29,10 @@ SOFTWARE.
 from simple_io.convert.base_64 import Base64
 from simple_io.convert.ibase_64 import IBase64
 
-from typeguard import typechecked
+from beartype import beartype
 
 
-@typechecked
+@beartype
 class Base64Utils:
     """!
     Provides generic encoder (ie Base64).

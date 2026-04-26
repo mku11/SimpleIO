@@ -26,12 +26,14 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-from typeguard import typechecked
+from typing import Any
+
+from beartype import beartype
 
 from simple_io.streams.random_access_stream import RandomAccessStream
 
 
-@typechecked
+@beartype
 class MemoryStream(RandomAccessStream):
     """!
     Memory Stream for seeking, reading, and writing to a memory buffer (modeled after C# MemoryStream).

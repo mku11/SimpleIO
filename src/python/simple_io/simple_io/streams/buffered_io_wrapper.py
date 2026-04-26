@@ -27,14 +27,14 @@ SOFTWARE.
 """
 
 from io import RawIOBase, BufferedIOBase
-from typeguard import typechecked
+from beartype import beartype
 from wrapt import synchronized
 
 from simple_io.streams.buffer import Buffer
 from simple_io.streams.random_access_stream import RandomAccessStream
 
 
-@typechecked
+@beartype
 class BufferedIOWrapper(BufferedIOBase):
     """!
     Wrapper stream of AbsStream to Python's native IOBase interface.
@@ -176,7 +176,6 @@ class BufferedIOWrapper(BufferedIOBase):
         @param stream: The stream that will be used to read from
         """
         stream.seek(start, RandomAccessStream.SeekOrigin.Begin)
-        bytes_read: int = 0
         total_bytes_read: int = 0
         while ((bytes_read := stream.read(cache_buffer.get_data(), offset + total_bytes_read,
                                           length - total_bytes_read)) > 0):
@@ -232,9 +231,6 @@ class BufferedIOWrapper(BufferedIOBase):
 
         if self.__stream_position >= self.__position_end + 1:
             return 0
-
-        min_count: int
-        bytes_read: int
 
         # truncate the count so getCacheBuffer() reports the correct buffer
         count = min(len(buffer), self.__total_size - self.__stream_position)

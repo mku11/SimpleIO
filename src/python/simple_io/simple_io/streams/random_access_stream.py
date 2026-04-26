@@ -31,10 +31,10 @@ SOFTWARE.
 from abc import ABC, abstractmethod
 from enum import Enum
 from typing import Callable, Any
-from typeguard import typechecked
+from beartype import beartype
 
 
-@typechecked
+@beartype
 class RandomAccessStream(ABC):
     """!
     Abstract read-write seekable stream used by internal streams
@@ -179,7 +179,6 @@ class RandomAccessStream(ABC):
         if buffer_size <= 0:
             buffer_size = RandomAccessStream.DEFAULT_BUFFER_SIZE
         buffer_size = buffer_size // self.get_align_size() * self.get_align_size()
-        bytes_read: int
         buffer: bytearray = bytearray(buffer_size)
         while (bytes_read := self.read(buffer, 0, buffer_size)) > 0:
             stream.write(buffer, 0, bytes_read)
@@ -187,7 +186,7 @@ class RandomAccessStream(ABC):
                 on_progress_changed(self.get_position(), self.get_length())
         stream.flush()
 
-    @typechecked
+    @beartype
     class SeekOrigin(Enum):
         """!
         Used to identify the start offset for seeking to a stream.

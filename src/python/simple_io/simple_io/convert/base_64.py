@@ -26,12 +26,12 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 
-from typeguard import typechecked
+from beartype import beartype
 import base64
 from simple_io.convert.ibase_64 import IBase64
 
 
-@typechecked
+@beartype
 class Base64(IBase64):
     """!
     Base64 encoder/decoder.
